@@ -174,7 +174,7 @@ function deployCard()
 	var mixer = new THREE.AnimationMixer(mesh);
 	var clips = mesh.children[0].animations;
 
-	var clip = THREE.AnimationClip.findByName(clips, 'Take 001');
+	var clip = THREE.AnimationClip.findByName(clips, "Take 001");
 	var action = mixer.clipAction(clip);
 	action.play();
 
