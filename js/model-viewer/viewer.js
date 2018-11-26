@@ -172,7 +172,7 @@ function deployCard()
 
 	// Wait until the animation has stopped to move back to the phaser page.
 	var mixer = new THREE.AnimationMixer(mesh);
-	var clips = mesh.children[0].animations;
+	var clips = mesh.animations;
 
 	var clip = THREE.AnimationClip.findByName(clips, "Take 001");
 	var action = mixer.clipAction(clip);
