@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head profile="http://www.w3.org/2005/10/profile">
+		<title>Model Viewer</title>
+		<meta charset="utf-8">
+
+		<link rel="shortcut icon" type="image/png" href="/content/sprites/favicon32.png">
+		<link rel="stylesheet" href="/css/model-viewer-styles.css">
+		<link rel="stylesheet" href="/css/ui-styles.css">
+
+		<style>
+			body {margin: 0px}
+			canvas {width: 100%; height: 100%}
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="/js/libs/inflate.min.js"></script>
+	</head>
+
+	<body>
+		<!-- This will contain all of the content for the Screen-Based UI on the model viewer.-->
+		<!-- This contains; Card Name/Price, Hacker Name/Icon, Deploy and Scan Again Buttons, misc graphics. -->
+		<div id="overlay-ui" style="display: block;">
+			
+			<!-- Holding the elements for displaying the name, price, and level of the card-->
+			<div id="card-details">
+				<h1 id="card-name" class="visible">Card Name</h1>
+				<p id="card-price">$100000</p>
+				<p id="card-level">Card Level</p>
+			</div>
+
+			<!-- This will show the hackers avatar, name and score-->
+			<div id="user-details">
+				<img id="user-avatar" src="/content/sprites/hacker-1.png" alt="User Avatar">
+				<p id="user-name">User Name</p>
+				<p id="user-funds">Funds: $1,250,000</p>
+				<p id="user-score">Score: 1,000,000</p>
+			</div>
+
+			<!-- This contains the buttons for deploying and scanning another card -->
+			<div id="scan">
+				<p id="scan-tag">DEPLOY CARD</p>
+				<img id="scan-fingerprint" src="/content/sprites/fingerprint.png">
+			</div>
+			
+			<div id="back-button">
+				<img id="back" src="/content/sprites/backbutton.png">
+			</div>
+
+			<!-- These are some misc images which we will have around the screen in some of the corners. Any divs
+				 should be switched with images. 																	-->
+			<div id="misc-tr"></div>
+			<div id="misc-br"></div>
+		</div>
+
+
+		<!-- THREE.js scripts for viewing the model-->
+		<script src="/js/three.js"></script>
+		<script src="/js/loaders/FBXLoader.js"></script>
+		<script src="/js/model-viewer/viewer.js"></script>
+	</body>
+</html>
