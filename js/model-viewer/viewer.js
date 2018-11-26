@@ -135,7 +135,7 @@ function animate()
 	requestAnimationFrame(animate);
 
 	//camera.lookAt((0, 0, 0));
-	//animateObject();
+	animateObject();
 
 	renderer.render(scene, camera);
 }
