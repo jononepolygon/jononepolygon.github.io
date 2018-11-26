@@ -164,8 +164,8 @@ function deployCard()
 	//alert("Played Card: " + scannedCard.name);
 
 	// Wait until the animation has stopped to move back to the phaser page.
-	var mixer = new THREE.AnimationMixer(mesh);
-	var clips = mesh.animations;
+	var mixer = new THREE.AnimationMixer(mesh.children[0]);
+	var clips = mesh.children[0].animations;
 
 	var clip = THREE.AnimationClip.findByName(clips, 'Take 001');
 	var action = mixer.clipAction(clip);
